@@ -329,18 +329,24 @@
         return pattern.test(emailAddress);
     }
 
-    function sendMail() {
+   function sendMail() {
   $('#contact-form').on('submit', function (e) {
-    e.preventDefault(); // prevent default form submission
+    e.preventDefault(); // stop normal form submission
+
+    var emailVal = $('#contact-email').val();
+
+    if (!isValidEmailAddress(emailVal)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
 
     var formData = {
       name: $('#name').val(),
-      email: $('#contact-email').val(),
+      email: emailVal,
       subject: $('#subject').val(),
       message: $('#message').val()
     };
 
-    // Show loading indicator (optional)
     $('.contact-submit-holder input[type="submit"]').val('Sending...');
 
     $.ajax({
@@ -350,12 +356,11 @@
       dataType: 'json',
       success: function () {
         $('#contact-form').replaceWith(`
-  <div class="contact-success-message" style="text-align: center; padding: 40px 20px; background-color: #fff7f8; border: 2px solid #f37b83; border-radius: 8px;">
-    <h3 style="color: #f37b83; margin-bottom: 10px;">Message sent!</h3>
-    <p style="font-size: 16px;">Thanks for reaching out! I'll get back to you as soon as I can.</p>
-  </div>
-`);
-
+          <div class="contact-success-message" style="text-align: center; padding: 40px 20px; background-color: #fff7f8; border: 2px solid #f37b83; border-radius: 8px;">
+            <h3 style="color: #f37b83; margin-bottom: 10px;">Message sent!</h3>
+            <p style="font-size: 16px;">Thanks for reaching out. I'll get back to you as soon as I can.</p>
+          </div>
+        `);
       },
       error: function () {
         $('#contact-form').append('<p style="color: red;">Oops, something went wrong. Please try again later.</p>');
@@ -364,6 +369,7 @@
     });
   });
 }
+
 
 
 })(jQuery);
