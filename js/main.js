@@ -329,11 +329,11 @@
         return pattern.test(emailAddress);
     }
 
-   function sendMail() {
+function sendMail() {
   $('#contact-form').on('submit', function (e) {
     e.preventDefault();
 
-    // Clear any previous errors
+    // Remove any previous error messages
     $('.email-error').remove();
 
     var nameVal = $('#name').val();
@@ -343,10 +343,17 @@
 
     // Validate email
     if (!isValidEmailAddress(emailVal)) {
-      // Ensure error is visible and styled
       $('#contact-email').closest('p').append(`
-        <div class="email-error" style="margin-top: 8px; background-color: #ffe5e8; color: #b00020; padding: 12px 16px; font-size: 14px; border-radius: 6px; font-weight: 500;">
-          Please enter a valid email address.
+        <div class="email-error" style="
+          margin-top: 8px;
+          background-color: #ffe5e8;
+          color: #b00020;
+          padding: 12px 16px;
+          font-size: 14px;
+          border-radius: 6px;
+          font-weight: 500;
+        ">
+          Valid Email Address Required
         </div>
       `);
       return;
@@ -368,7 +375,13 @@
       dataType: 'json',
       success: function () {
         $('#contact-form').replaceWith(`
-          <div class="contact-success-message" style="text-align: center; padding: 40px 20px; background-color: #fff7f8; border: 2px solid #f37b83; border-radius: 8px;">
+          <div class="contact-success-message" style="
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff7f8;
+            border: 2px solid #f37b83;
+            border-radius: 8px;
+          ">
             <h3 style="color: #f37b83; margin-bottom: 10px;">Message sent!</h3>
             <p style="font-size: 16px;">Thanks for reaching out. I'll get back to you as soon as I can.</p>
           </div>
@@ -376,9 +389,17 @@
       },
       error: function () {
         $('#contact-form').append(`
-          <p style="color: #b00020; background-color: #ffe5e8; padding: 12px; border-radius: 6px; font-weight: 500; margin-top: 20px;">
-            Something went wrong. Please try again later.
-          </p>
+          <div class="email-error" style="
+            margin-top: 20px;
+            background-color: #ffe5e8;
+            color: #b00020;
+            padding: 12px 16px;
+            font-size: 14px;
+            border-radius: 6px;
+            font-weight: 500;
+          ">
+            Valid Email Address Required
+          </div>
         `);
         $('.contact-submit-holder input[type="submit"]').val('SEND');
       }
@@ -390,5 +411,6 @@ function isValidEmailAddress(emailAddress) {
   var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(emailAddress);
 }
+
 
 })(jQuery);
