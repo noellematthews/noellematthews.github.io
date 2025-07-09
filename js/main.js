@@ -331,20 +331,33 @@
 
    function sendMail() {
   $('#contact-form').on('submit', function (e) {
-    e.preventDefault(); // stop normal form submission
+    e.preventDefault();
 
+    // Remove any previous error messages
+    $('.contact-form .email-error').remove();
+
+    var nameVal = $('#name').val();
     var emailVal = $('#contact-email').val();
+    var subjectVal = $('#subject').val();
+    var messageVal = $('#message').val();
 
+    // Validate email
     if (!isValidEmailAddress(emailVal)) {
-      alert('Please enter a valid email address.');
+      $('#contact-email').after(`
+        <p class="email-error" style="color: #b00020; background-color: #ffe5e8; padding: 10px; margin-top: 8px; border-radius: 5px; font-size: 14px;">
+          Please enter a valid email address.
+        </p>
+      `);
       return;
     }
 
+    // Optional: could validate name/message too if desired
+
     var formData = {
-      name: $('#name').val(),
+      name: nameVal,
       email: emailVal,
-      subject: $('#subject').val(),
-      message: $('#message').val()
+      subject: subjectVal,
+      message: messageVal
     };
 
     $('.contact-submit-holder input[type="submit"]').val('Sending...');
@@ -363,13 +376,22 @@
         `);
       },
       error: function () {
-        $('#contact-form').append('<p style="color: red;">Oops, something went wrong. Please try again later.</p>');
+        $('#contact-form').append(`
+          <p style="color: #b00020; background-color: #ffe5e8; padding: 12px; border-radius: 6px; font-weight: 500; margin-top: 20px;">
+            Something went wrong. Please try again later.
+          </p>
+        `);
         $('.contact-submit-holder input[type="submit"]').val('SEND');
       }
     });
   });
 }
 
+// Keep this function somewhere in your JS file:
+function isValidEmailAddress(emailAddress) {
+  var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(emailAddress);
+}
 
 
 })(jQuery);
