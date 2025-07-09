@@ -349,7 +349,13 @@
       data: formData,
       dataType: 'json',
       success: function () {
-        $('#contact-form').html('<p style="color: #f37b83; font-size: 18px;">Thanks for reaching out! I’ll get back to you soon.</p>');
+        $('#contact-form').replaceWith(`
+  <div class="contact-success-message" style="text-align: center; padding: 40px 20px; background-color: #fff7f8; border: 2px solid #f37b83; border-radius: 8px;">
+    <h3 style="color: #f37b83; margin-bottom: 10px;">Message sent!</h3>
+    <p style="font-size: 16px;">Thanks for reaching out! I'll get back to you as soon as I can.</p>
+  </div>
+`);
+
       },
       error: function () {
         $('#contact-form').append('<p style="color: red;">Oops, something went wrong. Please try again later.</p>');
