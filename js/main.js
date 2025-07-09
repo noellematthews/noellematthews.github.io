@@ -333,8 +333,8 @@
   $('#contact-form').on('submit', function (e) {
     e.preventDefault();
 
-    // Remove any previous error messages
-    $('.contact-form .email-error').remove();
+    // Clear any previous errors
+    $('.email-error').remove();
 
     var nameVal = $('#name').val();
     var emailVal = $('#contact-email').val();
@@ -343,15 +343,14 @@
 
     // Validate email
     if (!isValidEmailAddress(emailVal)) {
-      $('#contact-email').after(`
-        <p class="email-error" style="color: #b00020; background-color: #ffe5e8; padding: 10px; margin-top: 8px; border-radius: 5px; font-size: 14px;">
+      // Ensure error is visible and styled
+      $('#contact-email').closest('p').append(`
+        <div class="email-error" style="margin-top: 8px; background-color: #ffe5e8; color: #b00020; padding: 12px 16px; font-size: 14px; border-radius: 6px; font-weight: 500;">
           Please enter a valid email address.
-        </p>
+        </div>
       `);
       return;
     }
-
-    // Optional: could validate name/message too if desired
 
     var formData = {
       name: nameVal,
@@ -387,11 +386,9 @@
   });
 }
 
-// Keep this function somewhere in your JS file:
 function isValidEmailAddress(emailAddress) {
   var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(emailAddress);
 }
-
 
 })(jQuery);
