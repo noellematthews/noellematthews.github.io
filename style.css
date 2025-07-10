@@ -1788,7 +1788,6 @@ p.contact-submit-holder {
 }
 
 /* === Mobile Spacing Fix for Timeline and Cover Letter === */
-/* === Mobile fix for resume layout === */
 @media screen and (max-width: 767px) {
   .timeline-holder {
     margin-bottom: 50px !important;
@@ -1798,7 +1797,7 @@ p.contact-submit-holder {
     margin-bottom: 20px;
   }
 
-  .resume .one-half.width-40 {
+  .resume .width-40 {
     margin-top: 40px !important;
   }
 }
