@@ -1809,13 +1809,3 @@ p.contact-submit-holder {
 
 }
 
-
-/* === Custom Timeline Fixes === */
-.timeline-event-content a {
-  color: #f37b83;
-  text-decoration: underline;
-}
-
-.timeline-event-content a:hover {
-  color: #a88590;
-}
