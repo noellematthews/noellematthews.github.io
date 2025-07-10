@@ -1819,3 +1819,12 @@ p.contact-submit-holder {
 .timeline-event-content a:hover {
   color: #a88590;
 }
+
+li.timeline-event {
+    margin: 0 0 60px 60px; /* increased from 42px */
+    position: relative;
+    padding-top: 5px;
+    list-style: none;
+    transition: .3s;
+}
+
