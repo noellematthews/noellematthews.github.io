@@ -1776,3 +1776,24 @@ p.contact-submit-holder {
     }
 
 }
+
+/* === Custom Timeline Fixes === */
+.timeline-event-content a {
+  color: #f37b83;
+  text-decoration: underline;
+}
+
+.timeline-event-content a:hover {
+  color: #a88590;
+}
+
+/* === Mobile Spacing Fix for Timeline and Cover Letter === */
+@media screen and (max-width: 768px) {
+  .timeline-holder {
+    margin-bottom: 40px;
+  }
+
+  .width-40 {
+    margin-top: 20px;
+  }
+}
