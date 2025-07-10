@@ -1767,6 +1767,38 @@ p.contact-submit-holder {
 
 }
 
+@media screen and (max-width: 650px) {     
+
+    .menu-holder {
+        width: 100%;
+        transform: translateX(-100%);
+        padding-top: 70px;
+        padding-left: 20px;
+        overflow: auto;
+    }
+
+    .button-group-wrapper > a:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .skill-circle-holder > div:nth-of-type(n) {
+        display: table !important;
+        width: 100%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .skill-circle-holder > div:nth-last-of-type(2) {
+        margin-bottom: 40px !important;
+    }    
+
+    .skill-circle-wrapper canvas {
+        max-width: none;
+        max-height: none;
+    }
+
+}
+
 @media screen and (max-width: 480px) {    
 
     .button-group-wrapper > .button {
@@ -1777,6 +1809,7 @@ p.contact-submit-holder {
 
 }
 
+
 /* === Custom Timeline Fixes === */
 .timeline-event-content a {
   color: #f37b83;
@@ -1786,44 +1819,3 @@ p.contact-submit-holder {
 .timeline-event-content a:hover {
   color: #a88590;
 }
-
-/* === Mobile Spacing Fix for Timeline and Cover Letter === */
-/* === Mobile Spacing Fix for Timeline and Cover Letter === */
-@media screen and (max-width: 767px) {
-  .timeline-holder {
-    margin-bottom: 50px !important;
-  }
-
-  .timeline-event {
-    margin-bottom: 20px;
-  }
-
-  .resume .width-40 {
-    margin-top: 40px !important;
-  }
-}
-
-/* === Ensure Resume Columns Show Side-by-Side Above Mobile === */
-@media screen and (min-width: 768px) {
-  .resume .width-55 {
-    float: left;
-    width: 55%;
-  }
-
-  .resume .width-40 {
-    float: right;
-    width: 40%;
-  }
-
-  .resume:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-
-
-
-
-
