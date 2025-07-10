@@ -1788,19 +1788,21 @@ p.contact-submit-holder {
 }
 
 /* === Mobile Spacing Fix for Timeline and Cover Letter === */
-@media screen and (max-width: 768px) {
+/* === Mobile fix for resume layout === */
+@media screen and (max-width: 767px) {
   .timeline-holder {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
   }
 
   .timeline-event {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .resume .one-half.width-40 {
-    margin-top: 40px;
+    margin-top: 40px !important;
   }
 }
+
 
 
 
