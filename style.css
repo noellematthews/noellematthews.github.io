@@ -1788,6 +1788,7 @@ p.contact-submit-holder {
 }
 
 /* === Mobile Spacing Fix for Timeline and Cover Letter === */
+/* === Mobile Spacing Fix for Timeline and Cover Letter === */
 @media screen and (max-width: 767px) {
   .timeline-holder {
     margin-bottom: 50px !important;
@@ -1801,6 +1802,26 @@ p.contact-submit-holder {
     margin-top: 40px !important;
   }
 }
+
+/* === Ensure Resume Columns Show Side-by-Side Above Mobile === */
+@media screen and (min-width: 768px) {
+  .resume .width-55 {
+    float: left;
+    width: 55%;
+  }
+
+  .resume .width-40 {
+    float: right;
+    width: 40%;
+  }
+
+  .resume:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 
 
 
