@@ -179,43 +179,57 @@
     </div>
 </div>
 
-                    <!-- Portfolio Section -->  
 <!-- Portfolio Section -->  
 <div id="portfolio" class="section">                        
   <div class="section-wrapper block">
     <div class="content-1300">
       <div id="portfolio-wrapper" class="relative">
+
+        <!-- Category filter (hidden via CSS) -->
+        <div class="category-filter">
+          <div class="category-filter-icon"></div>                       
+        </div>
+        <div class="category-filter-list button-group filters-button-group">
+          <div class="button is-checked" data-filter="*">All</div>
+          <div class="button" data-filter=".text">Text</div>
+          <div class="button" data-filter=".video">Video</div>
+          <div class="button" data-filter=".image">Image</div>                                        
+        </div>
+
         <div class="portfolio-load-content-holder"></div>
         <div class="grid" id="portfolio-grid">                                                            
           <div class="grid-sizer"></div>
 
+          <!-- Capstone Project -->
           <div id="p-item-1" class="grid-item element-item p-one-third text">
-            <a class="item-link ajax-portfolio" href="portfolio-1.html" data-id="1">
+            <a class="item-link" href="portfolio-1.html" target="_blank">
               <img src="images/portfolio1.jpg" alt="" />
               <div class="portfolio-text-holder">
                 <div class="portfolio-text-wrapper">
                   <p class="portfolio-text">Crash Safety in Portland</p>
-                  <p class="portfolio-cat">DATA 510 Data Capstone</p>
+                  <p class="portfolio-cat">DATA 510: Data Capstone</p>
                 </div>
               </div>
             </a>
           </div>
 
+          <!-- Lucky Dog Analytics -->
           <div id="p-item-2" class="grid-item element-item p-one-third text">
-            <a class="item-link ajax-portfolio" href="portfolio-2.html" data-id="2">
+            <a class="item-link" href="portfolio-2.html" target="_blank">
               <img src="images/portfolio2.jpg" alt="" />
               <div class="portfolio-text-holder">
                 <div class="portfolio-text-wrapper">
                   <p class="portfolio-text">Lucky Dog Analytics</p>
-                  <p class="portfolio-cat">DATA 599 Sales Engineering for Data and AI</p>
+                  <p class="portfolio-cat">DATA 599: Sales Engineering for Data and AI</p>
                 </div>
               </div>
             </a>
           </div>
 
+          <!-- Portland Bike Hub -->
           <div id="p-item-3" class="grid-item element-item p-one-third text">
-            <a class="item-link ajax-portfolio" href="portfolio-3.html" data-id="3">
-              <img src="images/portfolio3.jpg" alt="" />
+            <a class="item-link" href="https://sites.google.com/willamette.edu/portlandbikehub/home" target="_blank">
+              <img src="images/portfolio-bikehub.jpg" alt="Portland Bike Hub Screenshot" />
               <div class="portfolio-text-holder">
                 <div class="portfolio-text-wrapper">
                   <p class="portfolio-text">Portland Bike Hub</p>
@@ -225,32 +239,35 @@
             </a>
           </div>
 
+          <!-- McDonald’s Graph Recreation -->
           <div class="grid-item element-item p-one-third video">
-            <a class="item-link" href="https://vimeo.com/199192931" data-rel="prettyPhoto[portfolio]">
+            <a class="item-link" href="portfolio-4.html" target="_blank">
               <img src="images/portfolio4.jpg" alt="" />
               <div class="portfolio-text-holder">
                 <div class="portfolio-text-wrapper">
-                  <p class="portfolio-text">McDonald's Graph Recreation</p>
-                  <p class="portfolio-cat">DATA 502 Data Visualization</p>
+                  <p class="portfolio-text">McDonald’s Graph Recreation</p>
+                  <p class="portfolio-cat">DATA 502: Data Visualization</p>
                 </div>
               </div>
             </a>
           </div>
 
+          <!-- Shark Week Programming -->
           <div class="grid-item element-item p-one-third image">
-            <a class="item-link" href="images/item_03.jpg" data-rel="prettyPhoto[portfolio]">
+            <a class="item-link" href="portfolio-5.html" target="_blank">
               <img src="images/portfolio5.jpg" alt="" />
               <div class="portfolio-text-holder">
                 <div class="portfolio-text-wrapper">
                   <p class="portfolio-text">Shark Week Programming</p>
-                  <p class="portfolio-cat">DATA 502 Data Visualization</p>
+                  <p class="portfolio-cat">DATA 502: Data Visualization</p>
                 </div>
               </div>
             </a>
           </div>
 
+          <!-- Studio Refresh SOP Video -->
           <div class="grid-item element-item p-one-third image">
-            <a class="item-link" href="images/item_02.jpg" data-rel="prettyPhoto[portfolio]">
+            <a class="item-link" href="portfolio-6.html" target="_blank">
               <img src="images/portfolio6.jpg" alt="" />
               <div class="portfolio-text-holder">
                 <div class="portfolio-text-wrapper">
@@ -260,6 +277,7 @@
               </div>
             </a>
           </div>
+
         </div>                
       </div>   
     </div>

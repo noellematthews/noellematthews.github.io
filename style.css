@@ -1827,4 +1827,8 @@ li.timeline-event {
     list-style: none;
     transition: .3s;
 }
+.category-filter,
+.category-filter-list {
+  display: none !important;
+}
 
