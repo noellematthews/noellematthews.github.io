@@ -803,14 +803,23 @@ h1.entry-title {
     top: 0;
     z-index: 1;
     font-size: 20px;
-    background-color: rgba(243, 123, 131, 0.7); /* Soft rose tint */
+    background-color: rgba(243, 123, 131, 0.6); /* soft rose tint */
     padding: 20px;
-    transform: none; /* Always visible */
-    transition: none;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: background-color 0.3s ease;
+}
+.grid-item:hover .portfolio-text-holder {
+    background-color: rgba(243, 123, 131, 0.95); /* more solid rose tint */
+}
+
+.portfolio-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
 }
 
 .grid-item a.item-link:hover .portfolio-text-holder,
@@ -824,12 +833,6 @@ h1.entry-title {
 
 .grid-item.portfolio-content-loading {
     opacity: 1 !important;
-}
-
-.portfolio-text-wrapper {
-    position: absolute;
-    left: 30px;
-    bottom: 0;
 }
 
 .portfolio-text {
