@@ -850,6 +850,12 @@ h1.entry-title {
     line-height: 100%;
 }
 
+.portfolio-text,
+.portfolio-cat {
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
 .portfolio-cat:before {
     content: "";
     display: inline-block;
