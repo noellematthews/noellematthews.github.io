@@ -412,5 +412,14 @@ function isValidEmailAddress(emailAddress) {
   return pattern.test(emailAddress);
 }
 
+$(window).on('hashchange', function () {
+    const currentHash = window.location.hash;
+
+    if (currentHash === '#portfolio') {
+        $('#portfolio-grid, .category-filter, .category-filter-list').removeClass('hide').show();
+        $('.portfolio-load-content-holder').removeClass('show').empty();
+    }
+});
+
 
 })(jQuery);
