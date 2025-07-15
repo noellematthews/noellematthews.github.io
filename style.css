@@ -928,6 +928,36 @@ h1.entry-title {
 .ajax-portfolio.portfolio-content-loading .portfolio-text-holder {
     opacity: 1;
 }
+.owl-carousel .owl-nav {
+    display: block !important;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: all;
+}
+
+.owl-carousel .owl-prev {
+    left: -20px;
+    background-image: url('images/nav_left.png');
+}
+
+.owl-carousel .owl-next {
+    right: -20px;
+    background-image: url('images/nav_right.png');
+}
 
 
 /* ===================================
