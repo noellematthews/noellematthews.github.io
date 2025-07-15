@@ -1114,21 +1114,26 @@ div.pp_default .pp_description {
     overflow: hidden;
 }
 
+.owl-carousel .owl-item {
+    overflow: hidden;
+    position: relative;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 .owl-carousel .owl-stage-outer {
     overflow: hidden !important;
 }
 
 .owl-carousel .owl-stage {
-    display: flex;
-    transition: all 0.5s ease;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-.owl-carousel .owl-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    box-sizing: border-box;
+.owl-carousel img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 
