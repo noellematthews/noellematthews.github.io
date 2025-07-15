@@ -1135,6 +1135,29 @@ div.pp_default .pp_description {
     width: 100%;
     height: auto;
 }
+/* Force each carousel slide to take up full width */
+.owl-carousel .owl-item {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+/* Ensure the outer wrapper clips properly */
+.owl-carousel .owl-stage-outer {
+  overflow: hidden;
+}
+
+/* Make images behave */
+.owl-carousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.owl-carousel img {
+  margin: 0 auto;
+}
 
 
 
