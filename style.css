@@ -1255,18 +1255,36 @@ img.my-signature {
 
 
 /* ===================================
-    9. Skills Section CSS
+   /* 9. Skills Section CSS
 ====================================== */
+
+.skill-circle-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+}
 
 .skill-circle-holder > div:last-of-type {
     margin-right: 0;
 }
 
 .skill-circle {
-    flex: 1 1 200px; /* consistent sizing */
-    max-width: 220px;
+    flex: 1 1 22%;
+    max-width: 22%;
     aspect-ratio: 1 / 1;
     margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-circle-wrapper {
+    width: 100% !important;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -1281,7 +1299,7 @@ span.skill-circle-num {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 45px;
+    font-size: clamp(28px, 5vw, 45px);
     font-weight: 700;
     color: #f37b83;
     letter-spacing: -1px;
@@ -1295,6 +1313,23 @@ p.skill-circle-text {
     letter-spacing: -1px;
     margin-bottom: 0;
 }
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .skill-circle {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .skill-circle {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Bar-style skills (unchanged) */
 
 .skills-holder {
     position: relative;
@@ -1338,35 +1373,17 @@ p.skill-circle-text {
     margin-top: 25px;
 }
 
-.skill-fill {
-    width: 10%;
-    height: 22px;
-    background-color: #f37b83;
-    transform: translateY(-5px);
-    transition: width .7s;
-}
-
 .skill-text span {
     font-size: 22px;
     line-height: 35px;
 }
 
-.skill-circle-wrapper {
-    width: 100% !important;
-    aspect-ratio: 1 / 1;
-    margin: 0 auto;
-    position: relative;
-}
-
-.skill-circle-holder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-span.skill-circle-num {
-    font-size: clamp(28px, 5vw, 45px);
+.skill-fill {
+    width: 10%;
+    height: 22px;
+    background-color: #f37b83;
+    transform: translateY(-5px);
+    transition: width 0.7s;
 }
 
 /* ===================================
