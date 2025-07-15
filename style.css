@@ -1953,3 +1953,31 @@ li.timeline-event {
   content: none !important;
 }
 
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    padding: 20px 10px;
+    overflow: visible;
+    height: auto;
+  }
+
+  .toggle-holder {
+    z-index: 9999;
+    position: relative;
+  }
+
+  .menu-holder {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .top-pagination {
+    display: none; /* Optional: hides pagination numbers if they’re causing crowding */
+  }
+
+  .my-info-wrapper {
+    display: none; /* Optional: hides your email/phone block from the left sidebar */
+  }
+}
+
