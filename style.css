@@ -1259,26 +1259,22 @@ img.my-signature {
 ====================================== */
 
 .skill-circle-holder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px 0;
-}
-
-.skill-circle-holder > div:last-of-type {
-    margin-right: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  padding: 20px 0;
 }
 
 .skill-circle {
-    width: 220px;
-    max-width: 100%;
-    aspect-ratio: 1 / 1;
-    margin: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .skill-circle-wrapper {
