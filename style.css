@@ -1953,6 +1953,8 @@ li.timeline-event {
   content: none !important;
 }
 
+
+
 @media (max-width: 768px) {
   .content-left {
     display: none;
@@ -1963,38 +1965,39 @@ li.timeline-event {
   }
 
   header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    background: #2f2223; /* your dark header color */
-    z-index: 9999;
-    padding: 15px;
+    position: relative;
+    background: #2f2223;
+    padding: 20px 20px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .toggle-holder {
-    z-index: 10000;
     position: relative;
+    z-index: 1000;
+    display: block;
+  }
+
+  .menu-line {
+    background-color: #fff; /* make sure the hamburger icon is visible */
   }
 
   .top-pagination {
-    display: none;
+    display: flex;
+    gap: 4px;
+    color: #f37b83;
+    font-weight: bold;
+    align-items: center;
   }
 
-  .menu-holder {
-    display: none; /* Hides the full vertical nav */
-  }
-
-  .my-info-wrapper {
+  .menu-holder,
+  .my-info-wrapper,
+  .big-num {
     display: none;
   }
 
   .content-right-wrapper {
-    padding-top: 100px; /* make space for fixed header */
+    padding-top: 20px;
   }
 }
-
