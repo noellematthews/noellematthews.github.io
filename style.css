@@ -1954,30 +1954,47 @@ li.timeline-event {
 }
 
 @media (max-width: 768px) {
+  .content-left {
+    display: none;
+  }
+
+  .content-right {
+    width: 100%;
+  }
+
   header {
-    position: relative;
-    padding: 20px 10px;
-    overflow: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: auto;
+    background: #2f2223; /* your dark header color */
+    z-index: 9999;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .toggle-holder {
-    z-index: 9999;
+    z-index: 10000;
     position: relative;
-  }
-
-  .menu-holder {
-    position: relative;
-    width: 100%;
-    padding-top: 20px;
   }
 
   .top-pagination {
-    display: none; /* Optional: hides pagination numbers if they’re causing crowding */
+    display: none;
+  }
+
+  .menu-holder {
+    display: none; /* Hides the full vertical nav */
   }
 
   .my-info-wrapper {
-    display: none; /* Optional: hides your email/phone block from the left sidebar */
+    display: none;
+  }
+
+  .content-right-wrapper {
+    padding-top: 100px; /* make space for fixed header */
   }
 }
 
