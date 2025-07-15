@@ -1271,8 +1271,8 @@ img.my-signature {
 }
 
 .skill-circle {
-    flex: 1 1 22%;
-    max-width: 22%;
+    width: 220px;
+    max-width: 100%;
     aspect-ratio: 1 / 1;
     margin: 20px;
     position: relative;
@@ -1314,18 +1314,17 @@ p.skill-circle-text {
     margin-bottom: 0;
 }
 
-/* Responsive Layout */
 @media (max-width: 1024px) {
     .skill-circle {
-        flex: 1 1 45%;
-        max-width: 45%;
+        width: 45%;
+        margin: 16px auto;
     }
 }
 
 @media (max-width: 600px) {
     .skill-circle {
-        flex: 1 1 100%;
-        max-width: 100%;
+        width: 100%;
+        margin: 16px auto;
     }
 }
 
