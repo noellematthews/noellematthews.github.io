@@ -1089,6 +1089,20 @@ div.pp_default .pp_description {
 .owl-theme .owl-dots .owl-dot.active span {
     background-color: #f37b83;
 }
+.owl-nav {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+}
+
+.owl-prev,
+.owl-next {
+    display: none !important;
+}
 
 
 /* ===================================
