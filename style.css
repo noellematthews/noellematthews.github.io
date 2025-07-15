@@ -579,14 +579,12 @@ h1.entry-title {
 }
 
 .site-info {
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #492d31;
     margin-top: 25px;
-    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #a88590;
 }
-
 
 .social-links {
     margin-top: 10vh;
