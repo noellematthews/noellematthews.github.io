@@ -1956,49 +1956,43 @@ li.timeline-event {
 
 
 @media (max-width: 768px) {
-  /* Hide full left sidebar */
   .content-left {
-    display: none;
+    display: none !important;
   }
 
-  /* Make right content take full width */
   .content-right {
-    width: 100%;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 20px;
   }
 
-  /* Add mobile header */
-  .mobile-header {
-    display: flex;
-    justify-content: space-between;
+  .home-left-part {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .entry-title {
+    font-size: 9vw !important; /* scales heading text for mobile */
+  }
+
+  .site-des,
+  .site-info {
+    font-size: 16px !important;
+    padding: 0 10px;
+  }
+
+  .social-links {
+    flex-direction: column;
     align-items: center;
-    background-color: #2f2223;
-    padding: 12px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
+    gap: 8px;
+    padding-top: 30px !important;
   }
 
-  /* Style toggle menu */
-  .mobile-header .menu-line {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-  }
-
-  /* Push content down */
-  .content-right-wrapper {
-    padding-top: 80px;
-  }
-
-  /* Hide old sidebar elements */
-  .menu-holder,
   .top-pagination,
+  .menu-holder,
   .my-info-wrapper,
-  .big-num {
-    display: none;
+  .big-num,
+  .toggle-holder {
+    display: none !important;
   }
 }
-
