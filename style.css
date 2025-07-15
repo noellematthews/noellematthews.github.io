@@ -1263,10 +1263,11 @@ img.my-signature {
 }
 
 .skill-circle {
-    display: inline-block;
-    margin-right: 6%;
-    width: 20%;
-    max-width: 254px;
+    flex: 1 1 200px; /* consistent sizing */
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    margin: 20px;
+    position: relative;
 }
 
 .skill-circle-wrapper canvas {
@@ -1350,6 +1351,23 @@ p.skill-circle-text {
     line-height: 35px;
 }
 
+.skill-circle-wrapper {
+    width: 100% !important;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    position: relative;
+}
+
+.skill-circle-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+span.skill-circle-num {
+    font-size: clamp(28px, 5vw, 45px);
+}
 
 /* ===================================
     10. Contact Section CSS
