@@ -1264,6 +1264,7 @@ img.my-signature {
   gap: 40px;
   justify-items: center;
   padding: 20px 0;
+    margin-bottom: 60px; /* 👈 Add this line for spacing */
 }
 
 .skill-circle {
