@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-    <title>Crash Safety in Portland – Noelle Matthews</title>
+    <title>Portland Greenways and Intersection Safety – Noelle Matthews</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="MSDS Capstone Project by Noelle Matthews" />
     <meta name="keywords" content="Data Science, Crash Risk, Infrastructure, Portland, Capstone" />
@@ -84,46 +84,49 @@
                             <div class="portfolio-content">
                                 <div class="row">
                                     <div class="one-half width-40">
-                                        <h2 class="entry-title section-title">Crash Safety in Portland</h2>
+                                        <h2 class="entry-title section-title">Portland Greenways and Intersection Safety</h2>
 
                                         <p class="section-info">
-                                            A capstone project exploring how infrastructure affects crash risk for cyclists and pedestrians.
+                                            An MS in Data Science capstone examining how street infrastructure affects crash risk for cyclists and pedestrians.
                                         </p>
 
                                         <p>
-                                            This project is the culmination of my MS in Data Science program. Alongside my partner Thomas Sato, I’m investigating how Portland’s street-level features (like greenways, lighting, and traffic calming devices) relate to the frequency and severity of crashes involving bikes and pedestrians.
+                                            This project is the culmination of my MS in Data Science program. Alongside my partner Thomas Sato, I analyzed how features such as neighborhood greenways, street lighting, traffic calming devices, and speed limits relate to the frequency and severity of crashes involving bikes and pedestrians, framed within Portland’s Vision Zero initiative to eliminate traffic deaths and serious injuries.
                                         </p>
 
                                         <p>
-                                            We're working with spatial data from 2007–2022, cleaning and aligning multiple city datasets to support intersection-level analysis. Our pipeline includes ingestion, transformation, schema normalization, exploratory analysis, and predictive modeling.
+                                            We worked with spatial data from 2007–2022, integrating and cleaning multiple city and state datasets to build a normalized, intersection-level database. Our workflow spanned data ingestion and transformation, schema design, exploratory spatial analysis, and predictive modeling. These steps allowed us to investigate how infrastructure, traffic exposure, and environmental conditions intersect to impact crash patterns and severity outcomes.
                                         </p>
 
                                         <p>
-                                            We’ve built a unified schema centered on a normalized <code>intersections</code> table, connecting crash records to layers like bike routes, street lighting, traffic volumes, and calming features. Early insights are already revealing where gaps in infrastructure may correspond with higher injury risk.
+                                            The completed project includes a fully documented database schema, interactive visualizations, and machine learning models that evaluate crash risk factors. The final site compiles our findings, data documentation, and full paper, offering insights into how targeted infrastructure improvements can support safer streets and advance Portland’s Vision Zero goals.
                                         </p>
 
                                         <p>
-                                            This is a live project that will be presented on August 12, 2025. The PDF linked below gives a detailed look at our data sources, architecture, schema, and early findings.
-                                        </p>
-
-                                        <p>
-                                            <a class="button" href="documents/capstone_data_summary.pdf" target="_blank">View Data Summary (PDF)</a>
+                                            <a class="button" href="https://wu-msds-capstones.github.io/project-writeup-thomas-noelle-capstone/" target="_blank">
+                                                View Full Capstone Project
+                                            </a>
                                         </p>
                                     </div>
 
-                           <div class="one-half width-55 last">
-    <div class="image-slider-wrapper relative">
-        <img src="images/portfolio1b.jpg" alt="Entity Relationship Diagram for Crash Safety Capstone" style="width: 100%; height: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
-        <p style="font-size: 14px; color: #a88590; font-weight: 500; text-align: center;">
-            Entity Relationship Diagram from our capstone data summary- the foundation that helped bring all the moving parts together.
-        </p>
-    </div>
-</div>
-
-                                            </div>
+                                    <div class="one-half width-55 last">
+                                        <div class="image-slider-wrapper relative">
+                                            <!-- Embed the heat map -->
+                                            <iframe src="heat-density.html" 
+                                                    style="width:100%; height:800px; border:1px solid #ccc; background:white;">
+                                            </iframe>
+                                            <p style="font-size: 14px; color: #a88590; font-weight: 500; text-align: center; margin-top: 10px;">
+                                                Heat map of bike and pedestrian crashes in Portland (2007–2022). 
+                                                Explore the full interactive project and paper 
+                                                <a href="https://wu-msds-capstones.github.io/project-writeup-thomas-noelle-capstone/" 
+                                                   target="_blank" 
+                                                   style="color: #c54f68; font-weight: 600; text-decoration: underline;">
+                                                   here
+                                                </a>.
+                                            </p>
                                         </div>
                                     </div>
-                                </div>                            
+                                </div> <!-- end row -->
                             </div>
                         </div>
                     </div>
